@@ -49,7 +49,8 @@ define(function() {
     },
 
     prepend : function(arr, item) {
-
+        arr.splice(0, 0, item);
+        return arr;
     },
 
     curtail : function(arr) {
@@ -63,7 +64,8 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
-
+        arr.splice(index, 0, item);
+        return arr;
     },
 
     count : function(arr, item) {
@@ -89,7 +91,8 @@ define(function() {
     },
 
     findAllOccurrences : function(arr, target) {
-
+        var indexOfOccurrences = [];
+        
     }
   };
 });
