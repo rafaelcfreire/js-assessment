@@ -79,7 +79,18 @@ define(function() {
     },
 
     duplicates : function(arr) {
-
+        var duplicateItems = [];
+        for(var index = 0; index < arr.length; index++){
+            var target = arr[index];
+            for(var innerIndex = index + 1; innerIndex < arr.length; innerIndex++){
+                if(arr[innerIndex] == target) {
+                    if(duplicateItems.indexOf(target) == -1){
+                        duplicateItems.push(target);
+                    }
+                }
+            }
+        }
+        return duplicateItems;
     },
 
     square : function(arr) {
@@ -92,7 +103,12 @@ define(function() {
 
     findAllOccurrences : function(arr, target) {
         var indexOfOccurrences = [];
-        
+        for(var index = 0; index < arr.length; index++){
+            if(arr[index] == target){
+                indexOfOccurrences.push(index);
+            }
+        }
+        return indexOfOccurrences;
     }
   };
 });
