@@ -23,7 +23,11 @@ define(function() {
     },
 
     useArguments : function() {
-
+        var sum = 0;
+        for(var a = 0; a < arguments.length; a++){
+            sum += arguments[a];
+        }
+        return sum;
     },
 
     callIt : function(fn) {
