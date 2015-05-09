@@ -32,7 +32,7 @@ define(function() {
     },
 
     multiply: function(a, b) {
-
+        return (new Number(a) * 100).valueOf() / 100 * (new Number(b) * 100 ).valueOf() / 100;
     }
   };
 });
