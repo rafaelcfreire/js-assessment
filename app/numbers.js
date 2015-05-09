@@ -3,7 +3,8 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     valueAtBit: function(num, bit) {
-
+        var array = this.convertToBinary(num);
+        return parseInt(array.charAt(8 - bit));
     },
 
     base10: function(str) {
