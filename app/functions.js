@@ -11,7 +11,7 @@ define(function() {
     },
 
     functionFunction : function(str) {
-
+        
     },
 
     makeClosures : function(arr, fn) {
