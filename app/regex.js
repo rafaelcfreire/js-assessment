@@ -7,7 +7,7 @@ define(function() {
     },
 
     containsRepeatingLetter : function(str) {
-        return (/([a-z])\1/ig).test(str);
+        return (/([A-Za-z])\1/ig).test(str);
     },
 
     endsWithVowel : function(str) {
@@ -18,8 +18,8 @@ define(function() {
     },
 
     captureThreeNumbers : function(str) {
-        if(str.match(/[0-9]{3}/g) ) {
-            var s = str.match(/[0-9]{3}/g);
+        if(str.match(/\d{3}/g) ) {
+            var s = str.match(/\d{3}/g);
             return s[0];
         }
         else 
@@ -27,11 +27,11 @@ define(function() {
     },
 
     matchesPattern : function(str) {
-        return (/\b[0-9]{3}-[0-9]{3}-[0-9]{4}\b/).test(str);
+        return (/\b\d{3}-\d{3}-\d{4}\b/).test(str);
     },
 
     isUSD : function(str) {
-        return (/^\$[0-9]+(\.|,)[0-9]{3}?(\.|,)?[0-9]{3}?(\.|,)?/g).test(str);
+        return (/^\$\d{1,3}(,\d{3})*(\.\d{2})?$/).test(str);
     }
   };
 });
