@@ -11,7 +11,9 @@ define(function() {
     },
 
     functionFunction : function(str) {
-        
+        return function(arg) {
+            return str + ', '+ arg;
+        }
     },
 
     makeClosures : function(arr, fn) {
@@ -19,7 +21,7 @@ define(function() {
     },
 
     partial : function(fn, str1, str2) {
-
+        
     },
 
     useArguments : function() {
